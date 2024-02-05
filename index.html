@@ -1,0 +1,360 @@
+<html>
+    <head>
+        <title>TicTacToe</title>
+        <link rel="icon" type="image/png" href="file:///D:/ganesh(html)/TicTacToe/favicon_io/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="file:///D:/ganesh(html)/TicTacToe/favicon_io/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="file:///D:/ganesh(html)/TicTacToe/favicon_io/favicon-64x64.png" sizes="64x64">
+  
+        <style>
+            body{
+                background-image: url('tic.jpg');
+			    backdrop-filter: blur(2px);
+                background-repeat: repeat;
+                background-size: cover;
+                opacity:0.9;
+                padding:50px;
+            }
+            #ce{
+                padding:40px;
+            }
+            #re{
+                font-size: 25px;
+                cursor: pointer;
+            }
+            input[type="button"] {
+            width: 100px;
+            height: 100px;
+            font-size: 50px;
+            vertical-align: top; 
+            cursor: pointer;
+            }
+            #tha img {
+                border-radius: 50%;
+            }
+            #te{
+                border: 0px;
+                height:0px;
+                width: 0px;
+                background-color: transparent;
+            }
+            #te1{
+                /* padding-left: 40%; */
+                border: 0px;
+                font-size: 40px;
+                color:yellow;
+                text-align: center;
+                background-color: transparent;
+            }
+        </style>
+    </head>
+    <body id="body">
+        <div id="box">
+        <center>
+            <h1>TicTacToe</h1>
+            <h3>Name of Player-1:
+            <input type="text" id="p1"></h3>
+            <h3>Name of Player-2:
+            <input type="text" id="p2"></h3>
+            <!-- <input type="text" id="te1"> -->
+        </center>
+        <center id="ce">
+            <input type="button" value="" id="bu" onclick="t()">
+            <input type="button" value="" id="bu1" onclick="t1()">
+            <input type="button" value="" id="bu2" onclick="t2()">
+            <br>
+            <input type="button" value="" id="bu3" onclick="t3()">
+            <input type="button" value="" id="bu4" onclick="t4()">
+            <input type="button" value="" id="bu5" onclick="t5()">
+            <br>
+            <input type="button" value="" id="bu6" onclick="t6()">
+            <input type="button" value="" id="bu7" onclick="t7()">
+            <input type="button" value="" id="bu8" onclick="t8()">
+            <br>
+            <br>
+            <input type="text" id="te1" readonly>
+            <br>
+            <br>
+            <input type="submit" value="Reset" id="re" onclick="reset()">
+            <br>
+            <br>
+            <h3 id="tha">Thanks for Visiting | Created by Ganesh <img src="logo1.jpg" alt="Website Logo" style="height: 20px; width: 20px;"></h3>
+        </center>
+    </div>
+        
+        <input type="text" id="te" readonly>
+        <script>
+            let c,c1,c2,c3,c4,c5,c6,c7,c8;
+            let a;
+            let p1,p2;
+            function reset()
+            {
+                document.getElementById('bu').value=""
+                document.getElementById('bu1').value=""
+                document.getElementById('bu2').value=""
+                document.getElementById('bu3').value=""
+                document.getElementById('bu4').value=""
+                document.getElementById('bu5').value=""
+                document.getElementById('bu6').value=""
+                document.getElementById('bu7').value=""
+                document.getElementById('bu8').value=""
+                document.getElementById('p1').value=""
+                document.getElementById('p2').value=""
+                document.getElementById('te1').value=""
+                document.getElementById('body').style.backgroundImage = 'url("tic.jpg")';
+                document.getElementById('body').style.backdropFilter='blur(2px)';
+                document.getElementById('te1').style.backgroundColor='transparent';
+                document.getElementById('te').value="o";
+            }
+            function t()
+            {
+                if(document.getElementById('te1').value=="")
+                {
+                    a=document.getElementById('te').value;
+                    if(document.getElementById('bu').value!="")
+                    {
+                    } 
+                    else if(a=='x')
+                    {
+
+                        document.getElementById('bu').value="o";
+                        document.getElementById('te').value="o";
+                    }
+                    else
+                    {
+                    document.getElementById('bu').value="x";
+                    document.getElementById('te').value="x";
+                    }
+                    res();
+                }
+            }
+            function t1()
+            {
+                if(document.getElementById('te1').value=="")
+                {
+                    a=document.getElementById('te').value;
+                    if(document.getElementById('bu1').value!="")
+                    {
+                    }
+                    else if(a=='x')
+                    {
+                    document.getElementById('bu1').value="o";
+                    document.getElementById('te').value="o";
+                    }
+                    else
+                    {
+                    document.getElementById('bu1').value="x";
+                    document.getElementById('te').value="x";
+                    }
+                    res();
+                }
+            }
+            function t2()
+            {
+                if(document.getElementById('te1').value=="")
+                {
+                    a=document.getElementById('te').value;
+                    if(document.getElementById('bu2').value!="")
+                    {
+                    }
+                    else if(a=='x')
+                    {
+                    document.getElementById('bu2').value="o";
+                    document.getElementById('te').value="o";
+                    }
+                    else
+                    {
+                    document.getElementById('bu2').value="x";
+                    document.getElementById('te').value="x";
+                    }
+                    c=document.getElementById('bu').value;
+                    c1=document.getElementById('bu1').value;
+                    c2=document.getElementById('bu2').value;
+                    c3=document.getElementById('bu3').value;
+                    c4=document.getElementById('bu4').value;
+                    c5=document.getElementById('bu5').value;
+                    c6=document.getElementById('bu6').value;
+                    c7=document.getElementById('bu7').value;
+                    c8=document.getElementById('bu8').value;
+                    // document.getElementById('te1').value="fdgh";
+                    res();
+                }
+            }
+            function t3()
+            {
+                if(document.getElementById('te1').value=="")
+                {
+                    a=document.getElementById('te').value;
+                    if(document.getElementById('bu3').value!="")
+                    {
+                    }
+                    else if(a=='x')
+                    {
+                    document.getElementById('bu3').value="o";
+                    document.getElementById('te').value="o";
+                    }
+                    else
+                    {
+                    document.getElementById('bu3').value="x";
+                    document.getElementById('te').value="x";
+                    }
+                    c=document.getElementById('bu').value;
+                    c1=document.getElementById('bu1').value;
+                    c2=document.getElementById('bu2').value;
+                    c3=document.getElementById('bu3').value;
+                    c4=document.getElementById('bu4').value;
+                    c5=document.getElementById('bu5').value;
+                    c6=document.getElementById('bu6').value;
+                    c7=document.getElementById('bu7').value;
+                    c8=document.getElementById('bu8').value;
+                    // document.getElementById('te1').value="fdgh";
+                    res();
+                }
+            }
+            function t4()
+            {
+                if(document.getElementById('te1').value=="")
+                {
+                    a=document.getElementById('te').value;
+                    if(document.getElementById('bu4').value!="")
+                    {
+                    }
+                    else if(a=='x')
+                    {
+                    document.getElementById('bu4').value="o";
+                    document.getElementById('te').value="o";
+                    }
+                    else
+                    {
+                    document.getElementById('bu4').value="x";
+                    document.getElementById('te').value="x";
+                    }
+                    res();
+                }
+            }
+            function t5()
+            {
+                if(document.getElementById('te1').value=="")
+                {
+                    a=document.getElementById('te').value;
+                    if(document.getElementById('bu5').value!="")
+                    {
+                    }
+                    else if(a=='x')
+                    {
+                    document.getElementById('bu5').value="o";
+                    document.getElementById('te').value="o";
+                    }
+                    else
+                    {
+                    document.getElementById('bu5').value="x";
+                    document.getElementById('te').value="x";
+                    }
+                    res();
+                }
+            }
+            function t6()
+            {
+                if(document.getElementById('te1').value=="")
+                {
+                    a=document.getElementById('te').value;
+                    if(document.getElementById('bu6').value!="")
+                    {
+                    }
+                    else if(a=='x')
+                    {
+                    document.getElementById('bu6').value="o";
+                    document.getElementById('te').value="o";
+                    }
+                    else
+                    {
+                    document.getElementById('bu6').value="x";
+                    document.getElementById('te').value="x";
+                    }
+                    res();
+                }
+            }
+            function t7()
+            {
+                if(document.getElementById('te1').value=="")
+                {
+                    a=document.getElementById('te').value;
+                    if(document.getElementById('bu7').value!="")
+                    {
+                    }
+                    else if(a=='x')
+                    {
+                    document.getElementById('bu7').value="o";
+                    document.getElementById('te').value="o";
+                    }
+                    else
+                    {
+                    document.getElementById('bu7').value="x";
+                    document.getElementById('te').value="x";
+                    }
+                    res();
+                }
+            }
+            function t8()
+            {
+                if(document.getElementById('te1').value=="")
+                {
+                    a=document.getElementById('te').value;
+                    if(document.getElementById('bu8').value!="")
+                    {
+                    }
+                    else if(a=='x')
+                    {
+                    document.getElementById('bu8').value="o";
+                    document.getElementById('te').value="o";
+                    }
+                    else
+                    {
+                    document.getElementById('bu8').value="x";
+                    document.getElementById('te').value="x";
+                    }
+                    res();
+                }
+            }
+            function res()
+            {
+                c=document.getElementById('bu').value;
+                    c1=document.getElementById('bu1').value;
+                    c2=document.getElementById('bu2').value;
+                    c3=document.getElementById('bu3').value;
+                    c4=document.getElementById('bu4').value;
+                    c5=document.getElementById('bu5').value;
+                    c6=document.getElementById('bu6').value;
+                    c7=document.getElementById('bu7').value;
+                    c8=document.getElementById('bu8').value;
+                    // document.getElementById('te1').value="fdgh";
+                    if((c=='o'&&c4=='o'&&c8=='o')||(c2=='o'&&c4=='o'&&c6=='o')||(c=='o'&&c1=='o'&&c2=='o')||(c=='o'&&c3=='o'&&c6=='o')||(c3=='o'&&c4=='o'&&c5=='o')||(c6=='o'&&c7=='o'&&c8=='o')||(c1=='o'&&c4=='o'&&c7=='o')||(c2=='o'&&c5=='o'&&c8=='o'))
+                    {
+                        p2=document.getElementById('p2').value;
+                        if(p2=="")
+                            p2="player-2";
+                        document.getElementById('te1').value=p2+" Wins";
+                        win();
+                    }
+                    else if((c=='x'&&c4=='x'&&c8=='x')||(c2=='x'&&c4=='x'&&c6=='x')||(c=='x'&&c1=='x'&&c2=='x')||(c=='x'&&c3=='x'&&c6=='x')||(c3=='x'&&c4=='x'&&c5=='x')||(c6=='x'&&c7=='x'&&c8=='x')||(c1=='x'&&c4=='x'&&c7=='x')||(c2=='x'&&c5=='x'&&c8=='x')){
+                        p1=document.getElementById('p1').value
+                        if(p1=="")
+                            p1="Player-1";
+                        document.getElementById('te1').value=p1+" Wins";
+                        win();
+                    }
+                    else if(c!=""&& c1!=""&& c2!=""&& c3!=""&& c4!=""&& c5!=""&& c6!=""&& c7!=""&& c8!="")
+                    {
+                        document.getElementById('te1').value="Game Draw";
+                    }
+            }
+            function win() {
+                document.getElementById('body').style.backgroundImage = 'url("con.gif")';
+                document.getElementById('body').style.backdropFilter='blur(0px)';
+                document.getElementById('body').style.backgroundSize='cover';
+                document.getElementById('te1').style.backgroundColor='transparent';
+            }
+
+            
+        </script>
+    </body>
+</html>
